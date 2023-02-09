@@ -8,16 +8,16 @@
  */
 
 var canMakeArithmeticProgression = function (arr) {
-  const sortedNum = arr.sort((a, b) => a - b);
+  const sortedNums = arr.sort((a, b) => a - b);
 
   if (arr.length < 3) {
     return true;
   }
 
-  const numDiff = sortedNum[1] - sortedNum[0];
+  const difNums = sortedNums[1] - sortedNums[0];
 
-  for (let i = 0; i < sortedNum.length - 1; i++) {
-    if (sortedNum[i + 1] - sortedNum[i] !== numDiff) return false;
+  for (let i = 0; i < sortedNums.length - 1; i++) {
+    if (sortedNums[i + 1] - sortedNums[i] !== difNums) return false;
   }
   return true;
 };
