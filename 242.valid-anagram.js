@@ -8,7 +8,7 @@
  * @return {boolean}
  */
 var isAnagram = function (s, t) {
-  const a = s.split("").sort().join("");
-  const b = t.split("").sort().join("");
-  return a !== b ? false : true;
+  const sortedStringOfS = s.split("").sort().join("");
+  const sortedStringOfT = t.split("").sort().join("");
+  return sortedStringOfS === sortedStringOfT;
 };
