@@ -6,7 +6,6 @@
  * @param {number} n
  * @return {string}
  */
-var thousandSeparator = function(n) {
-  const thousandSeparator = n.toLocaleString().replaceAll(',', '.');
-  return thousandSeparator;
+var thousandSeparator = function (n) {
+  return n.toLocaleString().replaceAll(",", ".");
 };
