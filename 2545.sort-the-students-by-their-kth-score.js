@@ -8,6 +8,5 @@
  * @return {number[][]}
  */
 var sortTheStudents = function(score, k) {
-  const studentsScore = [...score];
-  return  studentsScore.sort((a,b) => b[k] - a[k]);
+  return  score.sort((a,b) => b[k] - a[k]);
 };
