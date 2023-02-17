@@ -7,7 +7,7 @@
  * @return {boolean}
  */
 var isPalindrome = function(s) {
-  const originS = s.toLowerCase().replace(/[^0-9a-z]/gi, '');
-  const reversedS = originS.split("").reverse().join("");
-  return originS === reversedS;
+  const lowercaseChar = s.toLowerCase().replace(/[^0-9a-z]/gi, '');
+  const reversedS = lowercaseChar.split("").reverse().join("");
+  return lowercaseChar === reversedS;
 };
