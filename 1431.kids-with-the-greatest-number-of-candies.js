@@ -9,8 +9,8 @@
  */
 var kidsWithCandies = function (candies, extraCandies) {
   const result = [];
+  const mxValue = Math.max(...candies);
   for (let i = 0; i < candies.length; i++) {
-    const mxValue = Math.max(...candies);
     result.push(candies[i] + extraCandies >= mxValue);
   }
   return result;
