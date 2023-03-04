@@ -9,6 +9,7 @@
  */
 var sortPeople = function (names, heights) {
   const resultNameList = [];
+
   const heightsWithIdx = heights.map((height, idx) => {
     return { key: idx, height: height };
   });
@@ -21,5 +22,6 @@ var sortPeople = function (names, heights) {
   for (let i = 0; i < heightsWithIdx.length; i++) {
     resultNameList.push(nameWithIdx[heightsWithIdx[i].key].name);
   }
+
   return resultNameList;
 };
