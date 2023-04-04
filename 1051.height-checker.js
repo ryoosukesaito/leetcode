@@ -14,7 +14,7 @@ var heightChecker = function (heights) {
 
   for (let i = 0; i < heights.length; i++) {
     if (sortedHeightsArr[i] !== heights[i]) {
-      diffCounter += 1;
+      diffCounter++;
     }
   }
   return diffCounter;
