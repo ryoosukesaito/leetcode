@@ -10,9 +10,7 @@ var mostWordsFound = function (sentences) {
   let countWord = 0;
   for (let i = 0; i < sentences.length; i++) {
     const sentence = sentences[i].split(/\s/g);
-    if (countWord < sentence.length) {
-      countWord = sentence.length;
-    }
+    if (countWord < sentence.length) countWord = sentence.length;
   }
   return countWord;
 };
