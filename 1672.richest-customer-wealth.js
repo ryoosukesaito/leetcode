@@ -9,8 +9,7 @@
 var maximumWealth = function (accounts) {
   const result = [];
   for (let i = 0; i < accounts.length; i++) {
-    let initialValue = 0;
-    const total = accounts[i].reduce((acc, curr) => acc + curr, initialValue);
+    const total = accounts[i].reduce((acc, curr) => acc + curr, 0);
     result.push(total);
   }
   return Math.max(...result);
