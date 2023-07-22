@@ -8,14 +8,10 @@
  */
 var dominantIndex = function (nums) {
   const largestNum = Math.max(...nums);
-  let copyArr = [...nums];
+  const copyArr = [...nums];
   const secondLargeNum = Math.max(
     ...copyArr.sort().filter((num) => num !== largestNum)
   );
 
-  if (largestNum / 2 >= secondLargeNum) {
-    return nums.indexOf(largestNum);
-  } else {
-    return -1;
-  }
+  return largestNum / 2 >= secondLargeNum ? nums.indexOf(largestNum) : -1;
 };
