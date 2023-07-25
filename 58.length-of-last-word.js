@@ -13,4 +13,7 @@ var lengthOfLastWord = function (s) {
   for (let i = dividedString.length - 1; i >= 0; i--) {
     if (dividedString[i].length !== 0) return dividedString[i].length;
   }
+
+  //the way of using trim
+  // return s.trim().split(' ').at(-1).length;
 };
