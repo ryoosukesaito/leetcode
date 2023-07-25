@@ -8,7 +8,7 @@
 var diStringMatch = function (s) {
   const arr = [];
 
-  for (let i = 0; i < s.length + 1; i++) {
+  for (let i = 0; i <= s.length; i++) {
     arr.push(i);
   }
 
