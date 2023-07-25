@@ -8,21 +8,22 @@
  */
 var interpret = function (command) {
   let output = "";
-  let stack = [];
 
   for (let i = 0; i < command.length; i++) {
-    let target = command[i];
-    if (target === "(") {
-      if (command[i + 1] === ")") {
-        output += "o";
-      } else {
-        output += command[i + 1];
-      }
+    const target = command[i] + command[i + 1];
+    if (target === "()") {
+      output += "o";
       i++;
-    } else if (target !== ")") {
-      output += target;
+    } else if (target === "(a") {
+      output += "al";
+      i += 3;
+    } else {
+      output += target[0];
     }
   }
 
   return output;
+
+  //regarding to solution which is using easier method
+  // return command.replaceAll("()", "o").replaceAll("(al)", al);
 };
