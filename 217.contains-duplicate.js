@@ -9,9 +9,5 @@
 var containsDuplicate = function (nums) {
   const removedDuplicatedNum = new Set([...nums]);
 
-  if (removedDuplicatedNum.size !== nums.length) {
-    return true;
-  } else {
-    return false;
-  }
+  return removedDuplicatedNum.size !== nums.length;
 };
