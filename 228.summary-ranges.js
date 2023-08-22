@@ -9,7 +9,6 @@
 var summaryRanges = function (nums) {
   const result = [];
   RangeArrFunc(nums).map((num, idx) => {
-    console.log(num);
     num[0] === num[1]
       ? result.push(num[0].toString())
       : result.push(num.join("->"));
