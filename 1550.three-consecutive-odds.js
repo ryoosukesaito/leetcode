@@ -21,7 +21,6 @@ var threeConsecutiveOdds = function (arr) {
       i = j;
     }
     if (stock.length > 2) return true;
-    stock = [];
     i++;
     j = i + 1;
   }
